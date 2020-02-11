@@ -20,9 +20,10 @@ class AccesoController extends Controller
    		$ingresar = Personal::where('nick','=',$nick)
     	->where('password','=',$password)
     	->first();
+
+      if (!empty($ingresar))
     	{
     		  $nivel=$ingresar->rol->nom_rol;
-          $created_at=$ingresar->rol->created_at;
         	$nombre = $ingresar->nombre;
         	$foto = $ingresar->foto;
 
@@ -31,17 +32,18 @@ class AccesoController extends Controller
         	Session::put('foto',$foto);
 
 
-  if ($nivel == 'Parroco') {
+        if ($nivel == 'Parroco') {
           return redirect('capilla');
         }else
         {
           return redirect('personal');
         }
 
-      }
+      }else
       {
-        return redirect('/');
+        return "Usuario o contraseña incorrecta";
       }
+      
   }
     public function salir()
     {

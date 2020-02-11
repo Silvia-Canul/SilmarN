@@ -26,10 +26,9 @@ Route::get('capilla', function(){
 Route::get('personal',function(){
 	return view('personal.personal');
 });
-Route::get('servicio', function(){
+Route::get('servicio',function(){
 	return view('servicio.servicio');
 });
-
 
 
 ////////////////APIS///////////////////////////////
