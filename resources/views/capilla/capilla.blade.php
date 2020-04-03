@@ -8,7 +8,7 @@
 			<h2>Lista de capillas</h2>
 			<table class="table table-sm table-hover">
 				<thead class="thead-dark">
-					<th>No. Capilla</th>
+					<th>Numero Capilla</th>
 					<th>Nombre</th>
 					<th>Descripción</th>
 					<th>Municipio</th>
