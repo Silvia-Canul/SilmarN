@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('login.login');
+    return view('login.loginm');
 });
 Route::get('logout','AccesoController@salir');
 Route::post('validar','AccesoController@validar');
